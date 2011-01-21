@@ -15,14 +15,16 @@ Jeweler::Tasks.new do |gem|
   gem.name = "wistia-api"
   gem.homepage = "http://github.com/wistia/wistia-api"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
-  gem.email = "jbancroft@wistia.com"
-  gem.authors = ["Jim Bancroft"]
+  gem.summary = %Q{Ruby wrapper for Wistia's API}
+  gem.description = %Q{A ruby library for working with Wistia's data API.}
+  gem.email = "support@wistia.com"
+  gem.authors = ["Jim Bancroft", "Mark Bates"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
   # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
   #  gem.add_runtime_dependency 'jabber4r', '> 0.1'
   #  gem.add_development_dependency 'rspec', '> 1.2.3'
+  gem.add_runtime_dependency 'activeresource', '> 2.3.8'
+  gem.add_runtime_dependency 'configatron', '>= 2.6.4'
 end
 Jeweler::RubygemsDotOrgTasks.new
 
@@ -48,3 +50,4 @@ Rake::RDocTask.new do |rdoc|
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
+

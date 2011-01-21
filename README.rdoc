@@ -1,6 +1,6 @@
 = wistia-api
 
-Description goes here.
+Ruby wrapper for Wistia's API
 
 == Contributing to wistia-api
  
@@ -14,6 +14,6 @@ Description goes here.
 
 == Copyright
 
-Copyright (c) 2011 Jim Bancroft. See LICENSE.txt for
+Copyright (c) 2011 Wistia, Inc. See LICENSE.txt for
 further details.
 
