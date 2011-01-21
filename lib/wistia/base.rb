@@ -8,7 +8,6 @@ module Wistia
     self.format = Wistia::Config.config.api.format
     
     def to_json(options = {})
-      # super({ :root => self.class.element_name }.merge(options))
       return self.attributes.to_json(options)
     end
     

@@ -1,3 +1,3 @@
 require 'config'
-require 'wistia/media'
-require 'wistia/project'
+require 'active_resource'
+require 'wistia/base'
