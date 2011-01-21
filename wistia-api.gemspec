@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{wistia-api}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jim Bancroft", "Mark Bates"]
@@ -33,7 +33,8 @@ Gem::Specification.new do |s|
     "lib/wistia/media.rb",
     "lib/wistia/project.rb",
     "spec/spec_helper.rb",
-    "spec/wistia-api_spec.rb"
+    "spec/wistia-api_spec.rb",
+    "wistia-api.gemspec"
   ]
   s.homepage = %q{http://github.com/wistia/wistia-api}
   s.licenses = ["MIT"]
