@@ -8,11 +8,15 @@ Ruby wrapper for Wistia's API
 
 == Usage
 
-Start by requiring wistia:
+1. Start by requiring wistia:
 
 <tt>require 'wistia'</tt>
 
-Now you can use the <tt>Wistia::Media</tt> and <tt>Wistia::Project</tt> classes as ActiveResource wrappers around Wistia's API.
+2. Configure your API password:
+
+<tt>Wistia::Media.password = 'your-api-key-here'</tt>
+
+3. Now you can use the <tt>Wistia::Media</tt> and <tt>Wistia::Project</tt> classes as ActiveResource wrappers around Wistia's API.
 
 See http://wistia.com/doc/data-api for more info.
 
