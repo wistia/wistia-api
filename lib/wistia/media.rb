@@ -13,14 +13,6 @@ module Wistia
       return nil
     end
 
-    # Needed when deserializing from cache:
-    class Thumbnail < Wistia::Base
-    end # Thumbnail
-
-    # Needed when deserializing from cache:
-    class Asset < Wistia::Base
-    end # Asset
-
   end # Media
 end # Wistia
 

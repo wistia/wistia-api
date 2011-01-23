@@ -4,9 +4,15 @@ Ruby wrapper for Wistia's API
 
 == Installation
 
+Required gems:
+* activeresource >= 2.3.8
+* configatron >= 2.6.4
+
   gem install wistia-api
 
-== Usage
+RDoc[http://rubydoc.info/gems/wistia-api/0.1.3/frames]
+
+== Basic Usage
 
 Start by requiring wistia:
   require 'wistia'
@@ -14,9 +20,43 @@ Start by requiring wistia:
 Configure your API password:
   Wistia.password = 'your-api-key-here'
 
-Now you can use the <tt>Wistia::Media</tt> and <tt>Wistia::Project</tt> classes as ActiveResource wrappers around Wistia's API.
+You can get an API password by following the instructions here: http://wistia.com/doc/api-enable
+
+Now you can use the +Wistia::Media+, +Wistia::Project+, and +Wistia::Projects::Sharing+ classes as ActiveResource wrappers around Wistia's API.
 
 See http://wistia.com/doc/data-api for more info.
+
+== Configuration Options
+
+Set the format of the API:
+  Wistia.format = 'json'  # This is the default.
+  Wistia.format = 'xml'
+
+Read configuration from an external YAML file:
+  Wistia.use_config!(path_to_yaml)
+
+For an example YAML config, see spec/support/config.local.yml
+
+Configure using a Hash:
+  Wistia.use_config!(:wistia => {
+    :api => {
+      :url => 'custom-api-url',
+      :user => 'custom-api-user',
+      :password => 'your-api-password',
+      :format => 'xml-or-json'
+    }
+  })
+
+== Examples
+
+List all Media in your account:
+  Wistia::Media.find(:all)
+
+List all Projects in your account:
+  Wistia::Project.find(:all)
+
+List all Sharing objects for project 23:
+  Wistia::Projects::Sharing.find(:all, :params => { :project_id => 23 })
 
 == Copyright
 

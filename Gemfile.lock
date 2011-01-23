@@ -35,7 +35,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activeresource (> 2.3.8)
+  activeresource (>= 2.3.8)
   bundler (~> 1.0.0)
   configatron (>= 2.6.4)
   jeweler (~> 1.5.2)

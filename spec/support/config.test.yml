@@ -1,0 +1,6 @@
+wistia:
+  api:
+    key: 'test'
+    user: 'api'
+    format: 'json'
+    url: 'http://api.wistia.local:3000/v1/'
