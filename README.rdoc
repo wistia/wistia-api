@@ -11,7 +11,7 @@ Required gems:
 Install:
   gem install wistia-api
 
-RDoc[http://rubydoc.info/gems/wistia-api/0.1.4/frames]
+RDoc[http://rubydoc.info/gems/wistia-api/frames]
 
 == Basic Usage
 
