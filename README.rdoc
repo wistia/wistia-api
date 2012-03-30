@@ -25,7 +25,7 @@ You can get an API password by following the instructions here: http://wistia.co
 
 Now you can use the <tt>Wistia::Media</tt>, <tt>Wistia::Project</tt>, and <tt>Wistia::Projects::Sharing</tt> classes as ActiveResource wrappers around Wistia's API.
 
-See http://wistia.com/doc/data-api for more info.
+See http://wistia.com/doc/wistia_api.html for more info.
 
 == Configuration Options
 
