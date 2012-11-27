@@ -21,11 +21,11 @@ Start by requiring wistia:
 Configure your API password:
   Wistia.password = 'your-api-key-here'
 
-You can get an API password by following the instructions here: http://wistia.com/doc/api-enable
+You can get an API password by following the instructions here: http://wistia.com/doc/data-api#getting_started
 
 Now you can use the <tt>Wistia::Media</tt>, <tt>Wistia::Project</tt>, and <tt>Wistia::Projects::Sharing</tt> classes as ActiveResource wrappers around Wistia's API.
 
-See http://wistia.com/doc/wistia_api.html for more info.
+See http://wistia.com/doc/data-api for more info.
 
 == Configuration Options
 
@@ -63,4 +63,3 @@ List all Sharing objects for project 23:
 
 Copyright (c) 2011 Wistia, Inc. See LICENSE.txt for
 further details.
-
