@@ -4,6 +4,12 @@ require 'wistia/base'
 require 'wistia/media'
 require 'wistia/project'
 require 'wistia/projects/sharing'
+require 'wistia/stats/base'
+require 'wistia/stats/event'
+require 'wistia/stats/visitor'
+require 'wistia/stats/media'
+require 'wistia/stats/project'
+require 'wistia/stats/account'
 
 module Wistia
 
@@ -43,6 +49,7 @@ module Wistia
     Wistia::Media.refresh_config!
     Wistia::Project.refresh_config!
     Wistia::Projects::Sharing.refresh_config!
+    Wistia::Stats::Base.refresh_config!
   end
 
 end
