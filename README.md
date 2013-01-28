@@ -1,10 +1,9 @@
-Wistia-API
+Wistia API
 ==========
 
 Ruby wrapper for Wistia's API
 
-Installation
-------------
+# Installation
 
 ## Required gems:
 
@@ -15,8 +14,7 @@ Installation
 
     gem install wistia-api
 
-Basic Usage
------------
+# Basic Usage
 
 Start by requiring wistia:
 
