@@ -42,7 +42,7 @@ Read configuration from an external YAML file:
 
     Wistia.use_config!(path_to_yaml)
 
-For an example YAML config, see spec/support/config.local.yml
+For an example YAML config, see spec/support/config.test.yml
 
 Configure using a Hash:
 
