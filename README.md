@@ -8,7 +8,6 @@ Ruby wrapper for Wistia's API
 ## Required gems:
 
 * activeresource >= 2.3.8
-* configatron >= 2.6.4
 
 ## Install:
 

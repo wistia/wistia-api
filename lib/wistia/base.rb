@@ -1,21 +1,19 @@
-require File.join(File.dirname(__FILE__), 'config')
+require 'wistia/config'
 
 module Wistia
   class Base < ActiveResource::Base
-    # Resets all the ActiveResource configuration options to what's currently stored in the configatron.
-    def self.refresh_config!
-      self.site = Wistia::Config.config.api.url
-      self.user = Wistia::Config.config.api.user
-      self.password = Wistia::Config.config.api.key
-      self.format = Wistia::Config.config.api.format.to_sym
-    end
+    self.site = Wistia::API_BASE_URL
+    self.user = 'api'
 
-    refresh_config!
-    
-    def to_json(options = {})
-      return self.attributes.to_json(options)
+    def self.refresh_config!
+      self.password = Wistia.password
+      self.format = ActiveResource::Formats::JsonFormat if Wistia.format == :json
+      self.format = ActiveResource::Formats::XmlFormat if Wistia.format == :xml
     end
-    
+    refresh_config!
+
+    def to_json(options = {})
+      self.attributes.to_json(options)
+    end
   end
 end
-

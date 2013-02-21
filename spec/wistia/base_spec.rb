@@ -1,28 +1,30 @@
-require 'spec_helper'
+require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
-module Wistia
-  describe Base do
-    describe 'refresh_config!' do
-      it 'sets the "site" public class attribute' do
-        Wistia::Base.should_receive(:site=)
-        Wistia::Base.refresh_config!
-      end
-
-      it 'sets the "user" public class attribute' do
-        Wistia::Base.should_receive(:user=)
-        Wistia::Base.refresh_config!
-      end
-
-      it 'sets the "password" public class attribute' do
-        Wistia::Base.should_receive(:password=)
-        Wistia::Base.refresh_config!
-      end
-
-      it 'sets the "format" public class attribute' do
-        Wistia::Base.should_receive(:format=)
-        Wistia::Base.refresh_config!
-      end
+describe Wistia::Base do
+  describe 'authentication' do
+    it 'sets user to "api"' do
+      Wistia::Base.user.should == 'api'
+    end
+    it 'sets password based on config' do
+      Wistia.password = 'foo'
+      Wistia::Base.password.should == 'foo'
+    end
+  end
+  describe 'self#refresh_config!' do
+    it 'updates the configuration for the class' do
+      Wistia.password = 'bar'
+      Wistia::Base.password = 'foo'
+      Wistia::Base.password.should == 'foo'
+      Wistia::Base.refresh_config!
+      Wistia::Base.password.should == 'bar'
+    end
+  end
+  describe '#to_json' do
+    it 'renders attributes in json format' do
+      b = Wistia::Base.new
+      b.key1 = 'val1'
+      b.key2 = 'val2'
+      JSON.parse(b.to_json).should == {'key1' => 'val1', 'key2' => 'val2'}
     end
   end
 end
-
