@@ -8,13 +8,13 @@ Gem::Specification.new do |s|
   s.version = "0.2.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Jim Bancroft", "Mark Bates"]
-  s.date = "2012-12-12"
+  s.authors = ["Jeff Vincent", "Jim Bancroft", "Mark Bates", "Robby Grossman"]
+  s.date = "2013-02-22"
   s.description = "A ruby library for working with Wistia's data API."
   s.email = "support@wistia.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
-    "README.rdoc"
+    "README.md"
   ]
   s.files = [
     ".document",
@@ -23,76 +23,52 @@ Gem::Specification.new do |s|
     "Gemfile",
     "Gemfile.lock",
     "LICENSE.txt",
-    "README.rdoc",
+    "README.md",
     "Rakefile",
     "VERSION",
-    "lib/config.rb",
     "lib/wistia.rb",
     "lib/wistia/base.rb",
     "lib/wistia/config.rb",
     "lib/wistia/media.rb",
     "lib/wistia/project.rb",
     "lib/wistia/projects/sharing.rb",
-    "lib/wistia/stats/account.rb",
-    "lib/wistia/stats/base.rb",
-    "lib/wistia/stats/event.rb",
-    "lib/wistia/stats/media.rb",
-    "lib/wistia/stats/project.rb",
-    "lib/wistia/stats/visitor.rb",
+    "lib/wistia/stats.rb",
     "spec/spec_helper.rb",
     "spec/support/config.test.yml",
-    "spec/support/local_config.rb",
-    "spec/wistia/base_spec.rb",
-    "spec/wistia/projects/sharing_spec.rb",
-    "spec/wistia/stats/base_spec.rb",
     "spec/wistia_spec.rb",
     "wistia-api.gemspec"
   ]
   s.homepage = "http://github.com/wistia/wistia-api"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.24"
+  s.rubygems_version = "1.8.25"
   s.summary = "Ruby wrapper for Wistia's API"
-  s.test_files = [
-    "spec/spec_helper.rb",
-    "spec/support/local_config.rb",
-    "spec/wistia/base_spec.rb",
-    "spec/wistia/projects/sharing_spec.rb",
-    "spec/wistia/stats/base_spec.rb",
-    "spec/wistia_spec.rb"
-  ]
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<activeresource>, [">= 2.3.8"])
-      s.add_runtime_dependency(%q<configatron>, [">= 2.6.4"])
-      s.add_development_dependency(%q<rspec>, ["~> 2.3.0"])
-      s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
-      s.add_development_dependency(%q<jeweler>, ["~> 1.5.2"])
+      s.add_development_dependency(%q<bundler>, ["~> 1.2"])
+      s.add_development_dependency(%q<fakeweb>, ["~> 1.3"])
+      s.add_development_dependency(%q<jeweler>, ["~> 1.8"])
       s.add_development_dependency(%q<rcov>, [">= 0"])
-      s.add_runtime_dependency(%q<activeresource>, [">= 2.3.8"])
-      s.add_runtime_dependency(%q<configatron>, [">= 2.6.4"])
+      s.add_development_dependency(%q<rspec>, ["~> 2.12"])
     else
       s.add_dependency(%q<activeresource>, [">= 2.3.8"])
-      s.add_dependency(%q<configatron>, [">= 2.6.4"])
-      s.add_dependency(%q<rspec>, ["~> 2.3.0"])
-      s.add_dependency(%q<bundler>, ["~> 1.0.0"])
-      s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
+      s.add_dependency(%q<bundler>, ["~> 1.2"])
+      s.add_dependency(%q<fakeweb>, ["~> 1.3"])
+      s.add_dependency(%q<jeweler>, ["~> 1.8"])
       s.add_dependency(%q<rcov>, [">= 0"])
-      s.add_dependency(%q<activeresource>, [">= 2.3.8"])
-      s.add_dependency(%q<configatron>, [">= 2.6.4"])
+      s.add_dependency(%q<rspec>, ["~> 2.12"])
     end
   else
     s.add_dependency(%q<activeresource>, [">= 2.3.8"])
-    s.add_dependency(%q<configatron>, [">= 2.6.4"])
-    s.add_dependency(%q<rspec>, ["~> 2.3.0"])
-    s.add_dependency(%q<bundler>, ["~> 1.0.0"])
-    s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
+    s.add_dependency(%q<bundler>, ["~> 1.2"])
+    s.add_dependency(%q<fakeweb>, ["~> 1.3"])
+    s.add_dependency(%q<jeweler>, ["~> 1.8"])
     s.add_dependency(%q<rcov>, [">= 0"])
-    s.add_dependency(%q<activeresource>, [">= 2.3.8"])
-    s.add_dependency(%q<configatron>, [">= 2.6.4"])
+    s.add_dependency(%q<rspec>, ["~> 2.12"])
   end
 end
 

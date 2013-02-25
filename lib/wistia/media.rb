@@ -1,6 +1,5 @@
 module Wistia
   class Media < Wistia::Base
-    
     self.collection_name = 'medias'
 
     def still(width = 640, options = {})
@@ -12,9 +11,8 @@ module Wistia
           return url
         end
       end
-      return nil
+
+      nil
     end
-
-  end # Media
-end # Wistia
-
+  end
+end
