@@ -11,9 +11,15 @@ module Wistia
       self.use_config!(YAML.load_file(config))
     elsif config.is_a?(Hash)
       config = config.with_indifferent_access
+
       if data_hash = config && config[:wistia] && config[:wistia][:api]
-        # We need to support :key and :password as hash keys because we used to. We should deprecate :key.
-        new_password = data_hash[:password] || data_hash[:key]
+        if data_hash[:key]
+          data_hash[:password] = data_hash[:key]
+          warn '[DEPRECATION] You have configured wistia-api authentication using the configuration key: "key".'
+          warn '              Please use the configuration key "password" instead (using the same value).'
+        end
+
+        new_password = data_hash[:password]
         self.password = new_password unless new_password.nil?
         new_format = data_hash[:format]
         self.format = new_format.to_sym unless new_format.nil?
