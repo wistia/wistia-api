@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "wistia-api"
-  s.version = "0.2.1"
+  s.version = "0.2.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jeff Vincent", "Jim Bancroft", "Mark Bates", "Robby Grossman"]
-  s.date = "2013-02-22"
+  s.date = "2013-02-27"
   s.description = "A ruby library for working with Wistia's data API."
   s.email = "support@wistia.com"
   s.extra_rdoc_files = [
@@ -29,13 +29,19 @@ Gem::Specification.new do |s|
     "lib/wistia.rb",
     "lib/wistia/base.rb",
     "lib/wistia/config.rb",
+    "lib/wistia/initialization.rb",
     "lib/wistia/media.rb",
     "lib/wistia/project.rb",
     "lib/wistia/projects/sharing.rb",
     "lib/wistia/stats.rb",
     "spec/spec_helper.rb",
     "spec/support/config.test.yml",
-    "spec/wistia_spec.rb",
+    "spec/wistia/base_spec.rb",
+    "spec/wistia/config_spec.rb",
+    "spec/wistia/media_spec.rb",
+    "spec/wistia/project_spec.rb",
+    "spec/wistia/projects/sharing_spec.rb",
+    "spec/wistia/stats_spec.rb",
     "wistia-api.gemspec"
   ]
   s.homepage = "http://github.com/wistia/wistia-api"
