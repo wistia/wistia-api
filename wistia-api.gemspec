@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "wistia-api"
-  s.version = "0.2.2"
+  s.version = "0.2.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jeff Vincent", "Jim Bancroft", "Mark Bates", "Robby Grossman"]
-  s.date = "2013-02-27"
+  s.date = "2013-04-10"
   s.description = "A ruby library for working with Wistia's data API."
   s.email = "support@wistia.com"
   s.extra_rdoc_files = [
