@@ -13,6 +13,7 @@ module Wistia
     class Event < Wistia::Stats::Base
     end
     class Media < Wistia::Stats::Base
+      self.collection_name = 'medias'
     end
     class Project < Wistia::Stats::Base
     end
