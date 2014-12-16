@@ -75,6 +75,14 @@ List Overall Stats for Your Account
 
     Wistia::Stats::Account.find_singleton
 
+Find Media based on media id in your account:
+
+    Wistia::Media.find('YOUR_MEDIA_ID')
+    
+Find Projecs based on project id in your account:
+
+    Wistia::Project.find('YOUR_PROJECT_ID')
+
 Copyright
 ---------
 
