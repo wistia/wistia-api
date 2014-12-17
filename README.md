@@ -75,6 +75,32 @@ List Overall Stats for Your Account
 
     Wistia::Stats::Account.find_singleton
 
+Find Media based on media id in your account:
+
+    media = Wistia::Media.find('YOUR_MEDIA_ID')
+
+so you can access all attributes of media through media object.
+    
+    media.name # => 'video name' 
+
+also you can update media attributes through this object.
+
+    media.name = 'new video name'
+    media.save  # => true
+    
+Find Project based on project id in your account:
+
+    project = Wistia::Project.find('YOUR_PROJECT_ID')
+    
+so you can access all attributes of project through project object.
+
+    project.name # => 'project name' 
+    
+also you can update project attributes through this object.
+
+    project.name = 'new project name'
+    project.save  # => true
+
 Copyright
 ---------
 
