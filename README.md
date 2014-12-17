@@ -79,7 +79,7 @@ Find Media based on media id in your account:
 
     Wistia::Media.find('YOUR_MEDIA_ID')
     
-Find Projecs based on project id in your account:
+Find Projects based on project id in your account:
 
     Wistia::Project.find('YOUR_PROJECT_ID')
 
