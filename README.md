@@ -1,9 +1,12 @@
-Wistia API
-==========
+Wistia API Gem
+==============
 
-Ruby wrapper for Wistia's API
+Ruby wrapper for the [Wistia Data API](http://wistia.com/doc/data-api).
 
-# Installation
+Useful as a wrapper for the `Wistia::Media`, `Wistia::Project`,
+`Wistia::Projects::Sharing`, and `Wistia::Stats` classes.
+
+See http://wistia.com/doc/data-api for more info.
 
 ## Required gems:
 
@@ -13,21 +16,14 @@ Ruby wrapper for Wistia's API
 
     gem install wistia-api
 
-# Basic Usage
+## Basic Usage
 
-Start by requiring wistia:
+Start by requiring Wistia and configuring your
+[API password](http://wistia.com/doc/data-api#getting_started):
 
     require 'wistia'
-
-Configure your API password:
-
     Wistia.password = 'your-api-password-here'
 
-**NOTE:** [see the instructions for generating an API password](http://wistia.com/doc/data-api#getting_started)
-
-Now you can use the <tt>Wistia::Media</tt>, <tt>Wistia::Project</tt>, and <tt>Wistia::Projects::Sharing</tt> classes as ActiveResource wrappers around Wistia's API.
-
-See http://wistia.com/doc/data-api for more info.
 
 Configuration Options
 ---------------------
@@ -63,13 +59,13 @@ List all Projects in your account:
 
     Wistia::Project.find(:all)
 
-List all Sharing objects for project 23:
+List all Sharing objects for a project:
 
-    Wistia::Projects::Sharing.find(:all, :params => { :project_id => 23 })
+    Wistia::Projects::Sharing.find(:all, params: { project_id: 'YOUR_PROJECT_ID' })
 
-Get stats for a project since the December 1, 2012
+Get stats for a project since `December 1, 2012`
 
-    Wistia::Stats::Project.get('efjh6kxmc9/by_date', :start_date => '2012-12-01')
+    Wistia::Stats::Project.get('YOUR_PROJECT_ID/by_date', start_date: '2012-12-01')
 
 List Overall Stats for Your Account
 
@@ -80,22 +76,22 @@ Find Media based on media id in your account:
     media = Wistia::Media.find('YOUR_MEDIA_ID')
 
 so you can access all attributes of media through media object.
-    
-    media.name # => 'video name' 
+
+    media.name # => 'video name'
 
 also you can update media attributes through this object.
 
     media.name = 'new video name'
     media.save  # => true
-    
+
 Find Project based on project id in your account:
 
     project = Wistia::Project.find('YOUR_PROJECT_ID')
-    
+
 so you can access all attributes of project through project object.
 
     project.name # => 'project name' 
-    
+
 also you can update project attributes through this object.
 
     project.name = 'new project name'
