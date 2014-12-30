@@ -4,7 +4,7 @@ Wistia API Gem
 Ruby wrapper for the [Wistia Data API](http://wistia.com/doc/data-api).
 
 Useful as a wrapper for the `Wistia::Media`, `Wistia::Project`,
-`Wistia::Projects::Sharing`, and `Wistia::Stats` classes.
+`Wistia::Projects::Sharing`, `Wistia::Stats` and `Wistia::Medias::Customization` classes.
 
 See http://wistia.com/doc/data-api for more info.
 
@@ -128,6 +128,11 @@ also you can update project attributes through this object.
 project.name = 'new project name'
 project.save # => true
 ```
+
+Find Customization based on media id:
+
+    customization = Wistia::Medias::Customization.find_by_media_id('YOUR_MEDIA_ID')
+    customization.autoPlay # => 'true/false (autoPlay option)' 
 
 Copyright
 ---------
