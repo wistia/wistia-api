@@ -19,6 +19,11 @@ Jeweler::Tasks.new do |gem|
   gem.description = 'A ruby library for working with Wistia\'s data API.'
   gem.email = 'support@wistia.com'
   gem.authors = ['Jeff Vincent', 'Jim Bancroft', 'Mark Bates', 'Robby Grossman']
+  gem.post_install_message = %q{
+Please ensure you are running ActiveResource 2.3.0 or greater. You can check
+the version by running `bundle list | grep activeresource`. For details on why
+we don't enforce this via bundler, see https://github.com/wistia/wistia-api/issues/20
+}
 end
 Jeweler::RubygemsDotOrgTasks.new
 
