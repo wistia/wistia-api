@@ -1,0 +1,5 @@
+require 'wistia_active_support/core_ext/class/attribute_accessors'
+require 'wistia_active_support/core_ext/class/inheritable_attributes'
+require 'wistia_active_support/core_ext/class/removal'
+require 'wistia_active_support/core_ext/class/delegating_attributes'
+require 'wistia_active_support/core_ext/class/attribute'

@@ -1,0 +1,5 @@
+require 'wistia_active_support/core_ext/kernel/daemonizing'
+require 'wistia_active_support/core_ext/kernel/reporting'
+require 'wistia_active_support/core_ext/kernel/agnostics'
+require 'wistia_active_support/core_ext/kernel/requires'
+require 'wistia_active_support/core_ext/kernel/debugger'

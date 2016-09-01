@@ -36,10 +36,10 @@ describe Wistia do
       it 'sets the format in symbolic form from the hash' do
         Wistia.format.should be_nil
         Wistia.use_config!( :wistia => { :api => { :format => 'xml' } } )
-        Wistia::Base.format.should == ActiveResource::Formats::XmlFormat
+        Wistia::Base.format.should == WistiaActiveResource::Formats::XmlFormat
         Wistia.format.should == :xml
         Wistia.use_config!( :wistia => { :api => { :format => 'json' } } )
-        Wistia::Base.format.should == ActiveResource::Formats::JsonFormat
+        Wistia::Base.format.should == WistiaActiveResource::Formats::JsonFormat
         Wistia.format.should == :json
       end
       it 'leaves format alone when setting only password' do
