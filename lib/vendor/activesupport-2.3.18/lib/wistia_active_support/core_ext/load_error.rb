@@ -1,4 +1,4 @@
-class MissingSourceFile < LoadError #:nodoc:
+class WistiaMissingSourceFile < LoadError #:nodoc:
   attr_reader :path
   def initialize(message, path)
     super(message)
@@ -12,7 +12,7 @@ class MissingSourceFile < LoadError #:nodoc:
   def self.from_message(message)
     REGEXPS.each do |regexp, capture|
       match = regexp.match(message)
-      return MissingSourceFile.new(message, match[capture]) unless match.nil?
+      return WistiaMissingSourceFile.new(message, match[capture]) unless match.nil?
     end
     nil
   end
@@ -30,7 +30,7 @@ module WistiaActiveSupport #:nodoc:
     module LoadErrorExtensions #:nodoc:
       module LoadErrorClassMethods #:nodoc:
         def new(*args)
-          (self == LoadError && MissingSourceFile.from_message(args.first)) || super
+          (self == LoadError && WistiaMissingSourceFile.from_message(args.first)) || super
         end
       end
       ::LoadError.extend(LoadErrorClassMethods)
