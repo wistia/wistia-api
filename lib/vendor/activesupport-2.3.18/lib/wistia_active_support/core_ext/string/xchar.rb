@@ -6,6 +6,6 @@ begin
     alias_method :original_xs, :to_xs if method_defined?(:to_xs)
     alias_method :to_xs, :fast_xs
   end
-rescue LoadError
+rescue LoadError, TypeError
   # fast_xs extension unavailable.
 end
