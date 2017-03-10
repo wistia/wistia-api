@@ -67,6 +67,17 @@ List all Media in your account:
 Wistia::Media.find(:all)
 ```
 
+Find the next video (or previous video) with:
+
+    @media = Wistia::Media.all
+    # State @media as a parameter to avoid n + 1 problems and improve the performance.
+    @media.first.next_video(@media)
+
+Get the permalink for a video:
+
+    # It basically downcases and replaces spaces with dashes.
+    Wistia::Media.first.permalink
+
 List all Projects in your account:
 
 ```ruby
