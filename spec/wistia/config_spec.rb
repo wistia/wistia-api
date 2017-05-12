@@ -6,6 +6,7 @@ describe Wistia do
       expected_descendants = [
         Wistia::Base,
         Wistia::Media,
+        Wistia::Medias::Caption,
         Wistia::Project,
         Wistia::Projects::Sharing,
         Wistia::Stats::Base,
