@@ -1,5 +1,9 @@
-Wistia API Gem
+DEPRECATED
 ==============
+This gem is no longer actively supported or maintained.
+The best course of action is to manage your own HTTP calls to Wistia rather than rely on our client library.
+
+## Wistia API Gem
 
 Ruby wrapper for the [Wistia Data API](http://wistia.com/doc/data-api).
 
